@@ -1,0 +1,10 @@
+- name: Log into DockerHub
+  docker_login:
+    username: "{{ docker_username }}"
+    password: "{{ docker_password }}"
+    email: "{{ docker_email }}"
+- name: Docker Image Build
+  shell : docker build -t sohel2020/app:{{ tag_name }} . chdir=/home/ubuntu/laravelapp
+- name: Docker Image push
+  shell: docker push sohel2020/app:{{ tag_name }}
+

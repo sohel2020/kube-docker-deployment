@@ -1,0 +1,14 @@
+- name: copy secret script
+  template: src=secret.yml.j2 dest=~/secret.yml
+- name: create secret for database
+  shell: cd ~/;kubectl {{ action_name }} -f secret.yml
+- name: copy frontend deployment
+  template: src=frontend.yml.j2 dest=~/frontend.yml
+- name: deploy frontend using kubectl
+  shell: cd ~/;kubectl {{ action_name }} -f frontend.yml
+- name: copy backend deployment
+  template: src=backend.yml.j2 dest=~/backend.yml
+- name: deploy frontend using kubectl
+  shell: cd ~/;kubectl {{ action_name }} -f backend.yml
+
+
