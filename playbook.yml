@@ -9,7 +9,7 @@
       private: no
     - name: "action_name"
       prompt: "Enter kubeclt action name"
-      default: "update"
+      default: "replace"
       private: no   
   roles:      
     - dependency

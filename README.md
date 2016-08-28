@@ -25,7 +25,7 @@ $ ssh-add devops-key.pem
 ```bash
 $ ansible-playbook -i hosts playbook.yml
 ```
-It will ask a docker images version number. Please input it (Example: v1) and also ask kubeclt action name. (if your pod defination is already created inside your cluster then just press enter key so it'll pick **update** as a default value. If this is your first time that your are going to register your pod defination, then just type **create** , so your pod defination will be created for you in your kubernetes cluster)
+It will ask a docker images version number. Please input it (Example: v1) and also ask kubeclt action name. (if your pod defination is already created inside your cluster then just press enter key so it'll pick **replace** as a default value. If this is your first time that your are going to register your pod defination, then just type **create** , so your pod defination will be created for you in your kubernetes cluster)
 
 After then it'll install all dependency , clone your code from github, build docker images , push it to docker hub and then run kubeclt to deploy new images into the cluster.
 
