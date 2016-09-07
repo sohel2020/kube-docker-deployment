@@ -1,2 +1,2 @@
 - name: clone git repo
-  git: repo=https://github.com/sohel2020/laravelapp.git dest=/home/ubuntu/laravelapp version=master
+  git: repo=https://github.com/sohel2020/laravelapp.git dest=/home/ubuntu/laravelapp version={{ git_branch }}

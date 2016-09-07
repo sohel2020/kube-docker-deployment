@@ -1,7 +1,6 @@
 - name: Docker Image Build and push it to a public Repository
   hosts: docker-build
   gather_facts: false
-#  connection: local
   vars_prompt:
     - name: "tag_name"
       prompt: "Enter docker image tag number"
@@ -10,7 +9,11 @@
     - name: "action_name"
       prompt: "Enter kubeclt action name"
       default: "replace"
-      private: no   
+      private: no
+    - name: "git_branch"
+      prompt: "Enter your desire git branch name."
+      default: "master"
+      private: no    
   roles:      
     - dependency
     - git

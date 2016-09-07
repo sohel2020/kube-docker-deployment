@@ -4,6 +4,7 @@ metadata:
   name: laravel
   labels:
     app: laravel
+  namespace: {{ git_branch }}  
 spec:
   replicas: 1
   strategy:

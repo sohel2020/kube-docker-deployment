@@ -4,6 +4,7 @@ metadata:
   name: laravelmysql
   labels:
     app: backend
+  namespace: {{ git_branch }}  
 spec:
   strategy:
     type: Recreate
