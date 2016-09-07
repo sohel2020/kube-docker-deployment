@@ -20,7 +20,9 @@ $ eval $(ssh-agent -s)
 $ ssh-add devops-key.pem
 ```
 **step-4:** Navigate to your project directory
+
 **step-5:** Add  your cluster IP address inside **hosts** file. Just below the [docker-build] section. 
+
 **step-6:** Then run 
 ```bash
 $ ansible-playbook -i hosts playbook.yml
